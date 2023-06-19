@@ -36,6 +36,7 @@ public class BuySellWindow : MonoBehaviour
             State = state.nothing;
             seed = null;
             Amount = 0;
+            errorText.gameObject.SetActive(false);
             gameObject.SetActive(false);
         });
 
@@ -43,6 +44,9 @@ public class BuySellWindow : MonoBehaviour
         amountInputField.onValueChanged.AddListener((string changedString) => {
             if (seed == null)
                 return;
+            if (changedString == "")
+                return;
+
             int valueEntered = int.Parse(changedString);
 
             if(State == state.buy)
@@ -51,7 +55,9 @@ public class BuySellWindow : MonoBehaviour
                 UpdateExpectedAmount(Amount);
 
                 YesBtn.onClick.RemoveAllListeners();
-                YesBtn.onClick.AddListener(() => Buy(valueEntered));
+                YesBtn.onClick.AddListener(() => {
+                    Buy(valueEntered);
+                });
             }
 
             else if(State == state.sell)
@@ -60,7 +66,9 @@ public class BuySellWindow : MonoBehaviour
                 UpdateExpectedAmount(Amount * seed.SellPrice);
 
                 YesBtn.onClick.RemoveAllListeners();
-                YesBtn.onClick.AddListener(()=> Sell(Amount * seed.SellPrice));
+                YesBtn.onClick.AddListener(()=> {
+                    Sell(Amount * seed.SellPrice);
+                });
             }
         });
     }
@@ -70,7 +78,10 @@ public class BuySellWindow : MonoBehaviour
         if (Amount == 0)
             return;
         if (playerEconomy.GetMoney() < Amount)
+        {
+            StartCoroutine(ShowError());
             return;
+        }
 
         for(int i = 1; i <= numberOfSeeds; i++)
         {
@@ -78,6 +89,7 @@ public class BuySellWindow : MonoBehaviour
         }
         playerEconomy.UpdateMoney(-1 * Amount);
 
+        gameObject.SetActive(false);
     }
 
     private void Sell(int moneyEarned)
@@ -85,13 +97,24 @@ public class BuySellWindow : MonoBehaviour
         if (Amount == 0)
             return;
         if (playerInventory.GetNumberOfSeedsPerId(seed.id) < Amount)
+        {
+            StartCoroutine(ShowError());
             return;
-
+        }
         for (int i = 1; i <= Amount; i++)
         {
-            playerInventory.AddSeedInInventory(seed);
+            playerInventory.RemoveSeedInInventory(seed);
         }
-        playerEconomy.UpdateMoney(-1 * Amount);
+        playerEconomy.UpdateMoney(moneyEarned);
+
+        gameObject.SetActive(false);
+    }
+
+    IEnumerator ShowError()
+    {
+        errorText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        errorText.gameObject.SetActive(false);
     }
 
     public void SetState(state _state)
