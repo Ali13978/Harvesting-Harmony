@@ -89,7 +89,7 @@ public class UIManager : MonoBehaviour
         {
             ShopItemPrefab newItem = Instantiate(seedsShopItemPrefab, seedsShopContent.transform).GetComponent<ShopItemPrefab>();
 
-            newItem.UpdateUI(seed.sprite, seed.BuyPrice, seed.SellPrice);
+            //newItem.UpdateUI(seed.sprite, seed.BuyPrice, seed.SellPrice);
         }
     }
 }
