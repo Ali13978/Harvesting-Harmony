@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 887d0ecf3736f644b8975eafcccb6f00, type: 3}
-  m_Name: Banana
+  m_Script: {fileID: 11500000, guid: 9f4a308dae7ffd048a8b0eb8d5ae4a02, type: 3}
+  m_Name: Player
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: f0a8cca79440e4f41a371b7195677fb1, type: 3}
-  growthStages: []
-  DaysToGrowEachStage: 
-  id: Banana
-  BuyPrice: 15
-  SellPrice: 4
+  characterPhoto: {fileID: 21300000, guid: 18ecded8e9a44ea43a673e2c5d710e97, type: 3}
+  characterName: Player

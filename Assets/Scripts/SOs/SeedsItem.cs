@@ -9,4 +9,6 @@ public class SeedsItem : ScriptableObject
     public List<Sprite> growthStages;
     public List<int> DaysToGrowEachStage;
     public string id;
+    public int BuyPrice;
+    public int SellPrice;
 }

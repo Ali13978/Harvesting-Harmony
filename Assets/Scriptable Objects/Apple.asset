@@ -16,3 +16,5 @@ MonoBehaviour:
   growthStages: []
   DaysToGrowEachStage: 
   id: Apple
+  BuyPrice: 20
+  SellPrice: 10

@@ -16,3 +16,5 @@ MonoBehaviour:
   growthStages: []
   DaysToGrowEachStage: 
   id: Guava
+  BuyPrice: 17
+  SellPrice: 9
