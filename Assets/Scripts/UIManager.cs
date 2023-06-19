@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject seedsShopPannel;
     [SerializeField] private GameObject seedsShopContent;
     [SerializeField] private GameObject seedsShopItemPrefab;
+    [SerializeField] private Button exitSeedShopBtn;
 
 
     private void Start()
@@ -39,7 +40,7 @@ public class UIManager : MonoBehaviour
             }
             else
                 SeedsInventoryPannel.SetActive(false);
-    });
+        });
 
         toolsInventoryBtn.onClick.AddListener(() => {
             if (!ToolsInventoryPannel.activeInHierarchy)
@@ -50,6 +51,8 @@ public class UIManager : MonoBehaviour
             else
                 ToolsInventoryPannel.SetActive(false);
         });
+
+        exitSeedShopBtn.onClick.AddListener(()=> TurnOffAllPannels());
     }
 
     private void TurnOffAllPannels()
@@ -60,4 +63,33 @@ public class UIManager : MonoBehaviour
     }
 
 
+    public void TurnOnSeedShopPannel()
+    {
+        TurnOffAllPannels();
+        seedsShopPannel.SetActive(true);
+    }
+
+    public void UpdateSeedShopPannel(List<SeedsItem> seeds)
+    {
+        List<GameObject> childObjects = new List<GameObject>();
+
+        // Get all child GameObjects of Obj and add them to the list
+        for (int i = 0; i < seedsShopContent.transform.childCount; i++)
+        {
+            GameObject childObject = seedsShopContent.transform.GetChild(i).gameObject;
+            childObjects.Add(childObject);
+        }
+
+        foreach (GameObject i in childObjects)
+        {
+            Destroy(i);
+        }
+
+        foreach(SeedsItem seed in seeds)
+        {
+            ShopItemPrefab newItem = Instantiate(seedsShopItemPrefab, seedsShopContent.transform).GetComponent<ShopItemPrefab>();
+
+            newItem.UpdateUI(seed.sprite, seed.BuyPrice, seed.SellPrice);
+        }
+    }
 }

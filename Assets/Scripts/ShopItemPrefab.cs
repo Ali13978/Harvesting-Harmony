@@ -15,13 +15,10 @@ public class ShopItemPrefab : MonoBehaviour
     [SerializeField] private Button sellButton;
 
 
-    public void UpdateUI(Sprite _sprite, int _buyPrice, int _sellPrice, UnityAction buyAction, UnityAction sellAction)
+    public void UpdateUI(Sprite _sprite, int _buyPrice, int _sellPrice)
     {
         sprite.sprite = _sprite;
         buyPriceText.text = "Buy Price: " + _buyPrice.ToString() + "$";
         sellPriceText.text = "Sell Price: " + _sellPrice.ToString() + "$";
-
-        buyButton.onClick.AddListener(buyAction);
-        sellButton.onClick.AddListener(sellAction);
     }
 }
