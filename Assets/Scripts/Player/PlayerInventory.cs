@@ -109,4 +109,30 @@ public class PlayerInventory : MonoBehaviour
         seedsInventory = CalculateSeedCounts();
         return seedsInventory;
     }
+
+    public void AddSeedInInventory(SeedsItem seed)
+    {
+        seedsSOs.Add(seed);
+    }
+
+    public void RemoveSeedInInventory(SeedsItem seed)
+    {
+        seedsSOs.Remove(seed);
+    }
+
+    public int GetNumberOfSeedsPerId(string id)
+    {
+        // Output the seed counts to the console
+        foreach (var kvp in seedsInventory)
+        {
+            SeedsItem seed = kvp.Key;
+            
+            if(seed.id == id)
+            {
+                return kvp.Value;
+            }
+        }
+
+        return 0;
+    }
 }

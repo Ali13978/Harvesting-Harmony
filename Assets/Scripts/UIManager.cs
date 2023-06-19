@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject seedsShopItemPrefab;
     [SerializeField] private Button exitSeedShopBtn;
 
+    [Header("Buy Sell Window")]
+    [SerializeField] private BuySellWindow buySellWindow;
 
     private void Start()
     {
@@ -89,7 +92,19 @@ public class UIManager : MonoBehaviour
         {
             ShopItemPrefab newItem = Instantiate(seedsShopItemPrefab, seedsShopContent.transform).GetComponent<ShopItemPrefab>();
 
-            //newItem.UpdateUI(seed.sprite, seed.BuyPrice, seed.SellPrice);
+            UnityAction buyBtnAction = ()=>{
+                buySellWindow.UpdateBuySellWindow("Are you sure to buy", "How many " + seed.id + " You want to buy", "Not enough money to buy");
+                buySellWindow.SetSeed(seed);
+                buySellWindow.SetState(BuySellWindow.state.buy);
+                buySellWindow.gameObject.SetActive(true);
+            }; 
+            UnityAction sellBtnAction = ()=> {
+                buySellWindow.UpdateBuySellWindow("Are you sure to sell", "How many " + seed.id + " You want to sell", "Not enough items to sell");
+                buySellWindow.SetSeed(seed);
+                buySellWindow.SetState(BuySellWindow.state.sell);
+                buySellWindow.gameObject.SetActive(true);
+            };
+            newItem.UpdateUI(seed.sprite, seed.BuyPrice, seed.SellPrice, buyBtnAction, sellBtnAction);
         }
     }
 }

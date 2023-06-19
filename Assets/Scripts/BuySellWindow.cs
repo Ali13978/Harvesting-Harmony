@@ -14,25 +14,106 @@ public class BuySellWindow : MonoBehaviour
     [SerializeField] private Button NoBtn;
     [SerializeField] private Button YesBtn;
 
+    [SerializeField] private PlayerEconomy playerEconomy;
+    [SerializeField] private PlayerInventory playerInventory;
+
+    private int Amount = 0;
+
+    [HideInInspector] public enum state
+    {
+        nothing,
+        buy,
+        sell
+    }
+
+    private state State = state.nothing;
+
+    private SeedsItem seed;
+
     private void Start()
     {
-        NoBtn.onClick.AddListener(() => { gameObject.SetActive(false); });
+        NoBtn.onClick.AddListener(() => {
+            State = state.nothing;
+            seed = null;
+            Amount = 0;
+            gameObject.SetActive(false);
+        });
+
+
+        amountInputField.onValueChanged.AddListener((string changedString) => {
+            if (seed == null)
+                return;
+            int valueEntered = int.Parse(changedString);
+
+            if(State == state.buy)
+            {
+                Amount = valueEntered * seed.BuyPrice;
+                UpdateExpectedAmount(Amount);
+
+                YesBtn.onClick.RemoveAllListeners();
+                YesBtn.onClick.AddListener(() => Buy(valueEntered));
+            }
+
+            else if(State == state.sell)
+            {
+                Amount = valueEntered;
+                UpdateExpectedAmount(Amount * seed.SellPrice);
+
+                YesBtn.onClick.RemoveAllListeners();
+                YesBtn.onClick.AddListener(()=> Sell(Amount * seed.SellPrice));
+            }
+        });
+    }
+    
+    private void Buy(int numberOfSeeds)
+    {
+        if (Amount == 0)
+            return;
+        if (playerEconomy.GetMoney() < Amount)
+            return;
+
+        for(int i = 1; i <= numberOfSeeds; i++)
+        {
+            playerInventory.AddSeedInInventory(seed);
+        }
+        playerEconomy.UpdateMoney(-1 * Amount);
+
     }
 
-    public int GetInputRes()
+    private void Sell(int moneyEarned)
     {
-        int inputvalue = int.Parse(amountInputField.text);
-        Debug.Log(inputvalue);
-        return inputvalue;
+        if (Amount == 0)
+            return;
+        if (playerInventory.GetNumberOfSeedsPerId(seed.id) < Amount)
+            return;
+
+        for (int i = 1; i <= Amount; i++)
+        {
+            playerInventory.AddSeedInInventory(seed);
+        }
+        playerEconomy.UpdateMoney(-1 * Amount);
     }
 
-    public void UpdateBuySellWindow(string titleText, string infoText)
+    public void SetState(state _state)
     {
-
+        State = _state;
+    }
+    
+    public void UpdateBuySellWindow(string _titleText, string _infoText, string _errorText)
+    {
+        titleText.text = _titleText;
+        infoText.text = _infoText;
+        errorText.text = _errorText;
+        amountInputField.text = "";
     }
 
-    public void UpdateExpectedAmount(int amount)
+    public void SetSeed(SeedsItem _seed)
     {
+        seed = _seed;
+    }
 
+    private void UpdateExpectedAmount(int amount)
+    {
+        expectedAmountText.text = "Expected Amount: " + amount.ToString();
     }
 }
