@@ -13,11 +13,16 @@ public class ToolSelection : MonoBehaviour
     }
     #endregion
 
-    [SerializeField] private ToolsItem SelectedItem;
+    [SerializeField] private ToolsItem SelectedTool = null;
 
     public void SelectItem(ToolsItem item)
     {
-        SelectedItem = item;
+        SelectedTool = item;
+    }
+
+    public ToolsItem GetSelectedTool()
+    {
+        return SelectedTool;
     }
 
 }

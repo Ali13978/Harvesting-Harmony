@@ -12,11 +12,15 @@ public class SeedSelection : MonoBehaviour
     }
     #endregion
 
-    [SerializeField] private SeedsItem SelectedItem;
+    private SeedsItem SelectedSeed;
 
     public void SelectItem(SeedsItem item)
     {
-        SelectedItem = item;
+        SelectedSeed = item;
     }
 
+    public SeedsItem GetSelectedSeed()
+    {
+        return SelectedSeed;
+    }
 }

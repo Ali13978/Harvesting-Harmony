@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
+    #region singleton
+    public static PlayerInventory instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+    #endregion
+
     private InventoryUI inventoryUI;
 
     [SerializeField] private List<SeedsItem> seedsSOs = new List<SeedsItem>();

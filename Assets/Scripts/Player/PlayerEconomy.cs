@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PlayerEconomy : MonoBehaviour
 {
+    #region Singleton
+    public static PlayerEconomy instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+    #endregion
+
     [SerializeField] private int money;
 
     private EconomyUI economyUI;
