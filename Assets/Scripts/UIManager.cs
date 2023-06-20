@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
     [Header("ToolsInventoryPannel")]
     [SerializeField] private GameObject ToolsInventoryPannel;
     [SerializeField] private Button toolsInventoryBtn;
+    [SerializeField] private Image toolsIventoryBtnImage;
 
     [Header("SeedsShopPannel")]
     [SerializeField] private GameObject seedsShopPannel;
@@ -59,7 +60,7 @@ public class UIManager : MonoBehaviour
         exitSeedShopBtn.onClick.AddListener(()=> TurnOffAllPannels());
     }
 
-    private void TurnOffAllPannels()
+    public void TurnOffAllPannels()
     {
         SeedsInventoryPannel.SetActive(false);
         ToolsInventoryPannel.SetActive(false);
@@ -72,7 +73,7 @@ public class UIManager : MonoBehaviour
         TurnOffAllPannels();
         seedsShopPannel.SetActive(true);
     }
-
+    
     public void UpdateSeedShopPannel(List<SeedsItem> seeds)
     {
         List<GameObject> childObjects = new List<GameObject>();
@@ -107,5 +108,11 @@ public class UIManager : MonoBehaviour
             };
             newItem.UpdateUI(seed.sprite, seed.BuyPrice, seed.SellPrice, buyBtnAction, sellBtnAction);
         }
+    }
+
+
+    public void UpdateToolBtnImage(Sprite sprite)
+    {
+        toolsIventoryBtnImage.sprite = sprite;
     }
 }

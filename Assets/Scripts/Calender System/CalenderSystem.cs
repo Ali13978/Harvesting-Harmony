@@ -7,7 +7,7 @@ public class CalenderSystem : MonoBehaviour
     [SerializeField] float secondsInEachDay = 300f;
 
     private float time = 0;
-    private List<int> Date = new List<int> {1, 1, 2016};    // Day-Month-Year
+    private List<int> Date = new List<int> { 1, 1, 2016 };    // Day-Month-Year
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +44,7 @@ public class CalenderSystem : MonoBehaviour
             Date[0] = 1;
             Date[1]++;
 
-            if (Date[1] > 12)
+            if (Date[1] > 4)
             {
                 Date[1] = 1;
                 Date[2]++;

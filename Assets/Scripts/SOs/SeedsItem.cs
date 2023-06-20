@@ -11,4 +11,7 @@ public class SeedsItem : ScriptableObject
     public string id;
     public int BuyPrice;
     public int SellPrice;
+
+    public bool isFood;
+    public int strengthItGives;
 }
