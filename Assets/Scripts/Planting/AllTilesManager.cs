@@ -24,5 +24,11 @@ public class AllTilesManager : MonoBehaviour
         return allTiles;
     }
     
-    
+    public void GrowPlants()
+    {
+        foreach(TileManager tile in allTiles)
+        {
+            tile.GrowPlantDayCompleted();
+        }
+    }
 }

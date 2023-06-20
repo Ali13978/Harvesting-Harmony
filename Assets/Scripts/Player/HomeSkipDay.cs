@@ -6,6 +6,14 @@ using UnityEngine.UI;
 public class HomeSkipDay : MonoBehaviour
 {
     [SerializeField] private Button skipDayButton;
+    [SerializeField] private CalenderSystem calenderSystem;
+
+    private void Start()
+    {
+        skipDayButton.onClick.AddListener(() => {
+            calenderSystem.SkipDay();
+        });
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

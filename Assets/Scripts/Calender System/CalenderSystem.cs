@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CalenderSystem : MonoBehaviour
 {
+    [SerializeField] AllTilesManager allTilesManager;
     [SerializeField] float secondsInEachDay = 300f;
 
     private float time = 0;
     private List<int> Date = new List<int> { 1, 1, 2016 };    // Day-Month-Year
+    
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,7 @@ public class CalenderSystem : MonoBehaviour
         if (time > secondsInEachDay)
         {
             time = 0f;
+            allTilesManager.GrowPlants();
             IncrementDate();
             CalenderUI.instance.UpdateDate(Date);
             GameSaveManager.instance.SaveGame();
@@ -52,6 +56,10 @@ public class CalenderSystem : MonoBehaviour
         }
     }
 
+    public void SkipDay()
+    {
+        time = secondsInEachDay - 2;
+    }
 
     public List<int> GetDate()
     {

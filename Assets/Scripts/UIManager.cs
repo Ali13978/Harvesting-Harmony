@@ -95,6 +95,9 @@ public class UIManager : MonoBehaviour
         {
             ShopItemPrefab newItem = Instantiate(seedsShopItemPrefab, seedsShopContent.transform).GetComponent<ShopItemPrefab>();
 
+            if (!seed.isPurchaseable)
+                newItem.buyButtonSetActive(false);
+
             UnityAction buyBtnAction = ()=>{
                 buySellWindow.UpdateBuySellWindow("Are you sure to buy", "How many " + seed.id + " You want to buy", "Not enough money to buy");
                 buySellWindow.SetSeed(seed);
@@ -102,7 +105,7 @@ public class UIManager : MonoBehaviour
                 buySellWindow.gameObject.SetActive(true);
             }; 
             UnityAction sellBtnAction = ()=> {
-                buySellWindow.UpdateBuySellWindow("Are you sure to sell", "How many " + seed.id + " You want to sell", "Not enough items to sell");
+                buySellWindow.UpdateBuySellWindow("Are you sure to sell", "How many " + seed.id + " you want to sell", "Not enough items to sell");
                 buySellWindow.SetSeed(seed);
                 buySellWindow.SetState(BuySellWindow.state.sell);
                 buySellWindow.gameObject.SetActive(true);

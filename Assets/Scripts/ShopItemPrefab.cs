@@ -23,4 +23,9 @@ public class ShopItemPrefab : MonoBehaviour
         buyButton.onClick.AddListener(BuyBtnAction);
         sellButton.onClick.AddListener(SellBtnAction);
     }
+
+    public void buyButtonSetActive(bool isActive)
+    {
+        buyButton.gameObject.SetActive(isActive);
+    }
 }

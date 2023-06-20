@@ -10,6 +10,7 @@ public class TileManager : MonoBehaviour
     [SerializeField] private Sprite[] tileSprites;
     [SerializeField] private FarmTile tile;
     [SerializeField] public bool isOwned;
+    [SerializeField] Cultivating cultivating;
 
     public int indexInAllTilesList;
     
@@ -17,6 +18,8 @@ public class TileManager : MonoBehaviour
     public SeedsItem plantedSeed;
     public int growthIndex;
     public int daysLeftforNextGrowthStage;
+
+    public bool isGrown;
 
     private void Start()
     {
@@ -32,8 +35,23 @@ public class TileManager : MonoBehaviour
             tile.BuyCanvasSetActive(false);
         if (TileState == state.Hoed || TileState == state.Watered)
             HoeTile();
-        if(isPlanted)
+        if (isPlanted)
+        {
             tile.UpdateCropSprite(plantedSeed.growthStages[growthIndex]);
+
+            if (growthIndex >= (plantedSeed.growthStages.Count - 1))
+                isGrown = true;
+        }
+    }
+
+    private void Update()
+    {
+        if (!isGrown)
+            return;
+        if (cultivating.GetClickCollider().enabled)
+            return;
+
+        cultivating.GetClickCollider().enabled = true;
     }
 
     public void HoeTile()
@@ -51,7 +69,7 @@ public class TileManager : MonoBehaviour
     public void BaseTile()
     {
         TileState = state.Basic;
-        tile.UpdateTileSpriteWithColor(tileSprites[1], Color.white);
+        tile.UpdateTileSpriteWithColor(tileSprites[0], Color.white);
     }
 
     public state GetTileState()
@@ -74,9 +92,35 @@ public class TileManager : MonoBehaviour
 
         tile.UpdateCropSprite(plantedSeed.growthStages[growthIndex]);
     }
-
-    public void GrowPlant()
+    
+    public void GrowPlantDayCompleted()
     {
+        BaseTile();
+        if (!isPlanted)
+            return;
+        if (TileState == state.Hoed)
+            return;
+        HoeTile();
+        if (isGrown)
+            return;
+        
+        daysLeftforNextGrowthStage--;
 
+        if(daysLeftforNextGrowthStage <= 0)
+        {
+            growthIndex++;
+
+            if(growthIndex < (plantedSeed.growthStages.Count - 1))
+            {
+                tile.UpdateCropSprite(plantedSeed.growthStages[growthIndex]);
+                daysLeftforNextGrowthStage = plantedSeed.DaysToGrowEachStage[growthIndex];
+            }
+            else
+            {
+                tile.UpdateCropSprite(plantedSeed.growthStages[growthIndex]);
+                isGrown = true;
+            }
+
+        }
     }
 }

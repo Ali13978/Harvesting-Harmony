@@ -15,6 +15,10 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 48de0fc5cb70d6043bf53e830cbbf00f, type: 3}
   growthStages: []
   DaysToGrowEachStage: 
+  foodItWillGrow: {fileID: 0}
   id: Guava
   BuyPrice: 17
   SellPrice: 9
+  isPurchaseable: 1
+  isFood: 0
+  strengthItGives: 0
