@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     [Header("SeedsInventoryPannel")]
     [SerializeField] private GameObject SeedsInventoryPannel;
     [SerializeField] private Button seedsInventoryBtn;
+    [SerializeField] private Image seedsIventoryBtnImage;
 
     [Header("ToolsInventoryPannel")]
     [SerializeField] private GameObject ToolsInventoryPannel;
@@ -114,5 +115,10 @@ public class UIManager : MonoBehaviour
     public void UpdateToolBtnImage(Sprite sprite)
     {
         toolsIventoryBtnImage.sprite = sprite;
+    }
+
+    public void UpdateSeedBtnImage(Sprite sprite)
+    {
+        seedsIventoryBtnImage.sprite = sprite;
     }
 }

@@ -39,6 +39,21 @@ public class InventoryUI : MonoBehaviour
 
             Debug.Log(", ID: " + seed.id + ", Count: " + count);
             GameObject InstantiatedSeed = Instantiate(InventoryModules.PrefabOfSeeds, InventoryModules.Content);
+
+            InstantiatedSeed.GetComponent<Button>().onClick.AddListener(() => {
+                if (!seed.isFood)
+                {
+                    SeedSelection.instance.SelectItem(seed);
+                    UIManager.instance.UpdateSeedBtnImage(seed.sprite);
+                    UIManager.instance.TurnOffAllPannels();
+                }
+                else
+                {
+                    PlayerFood.instance.UpdateStrength(seed.strengthItGives);
+                    playerInventory.RemoveSeedInInventory(seed);
+                }
+            });
+
             InstantiatedSeed.GetComponent<Image>().sprite = seed.sprite;
             InstantiatedSeed.GetComponentInChildren<TMP_Text>().text = "x" + count.ToString();
         }

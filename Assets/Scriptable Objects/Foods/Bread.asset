@@ -15,8 +15,8 @@ MonoBehaviour:
   sprite: {fileID: 172463635, guid: 2371642267e858141aab9d914cb0a269, type: 3}
   growthStages: []
   DaysToGrowEachStage: 
-  id: 
-  BuyPrice: 0
-  SellPrice: 0
-  isFood: 0
+  id: food_bread
+  BuyPrice: 30
+  SellPrice: 10
+  isFood: 1
   strengthItGives: 10
