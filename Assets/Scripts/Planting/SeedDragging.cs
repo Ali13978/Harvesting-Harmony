@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -5,6 +6,7 @@ public class SeedDragging : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     [SerializeField] RectTransform imageRectTransform;
     [SerializeField] Vector2 offset = Vector2.zero;
+
     private Vector3 initialImagePosition;
 
     private void Start()
@@ -42,6 +44,12 @@ public class SeedDragging : MonoBehaviour, IDragHandler, IEndDragHandler
         if(tile.GetTileState() == TileManager.state.Hoed || tile.GetTileState() == TileManager.state.Watered)
         {
             tile.PlantSeed(SelectedSeed);
+
+            if (PlayerInventory.instance.GetNumberOfSeedsPerId(SelectedSeed.id) > 1)
+                return;
+
+            SeedSelection.instance.SelectItem(null);
+            UIManager.instance.ResetSeedInventoryBtnImage();
         }
 
     }

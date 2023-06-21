@@ -26,6 +26,7 @@ public class FarmTile : MonoBehaviour
 
                     BuyCanvas.SetActive(false);
                     PlayerEconomy.instance.UpdateMoney(-1 * tile.PriceTobuy);
+                    tileBuySellWindow.gameObject.SetActive(false);
                 }
                 else
                 {

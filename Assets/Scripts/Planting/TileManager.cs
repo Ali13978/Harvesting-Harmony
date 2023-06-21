@@ -99,12 +99,15 @@ public class TileManager : MonoBehaviour
     
     public void GrowPlantDayCompleted()
     {
-        BaseTile();
+        if (TileState != state.Watered)
+            return;
         if (!isPlanted)
             return;
         if (TileState == state.Hoed)
             return;
         HoeTile();
+
+
         if (isGrown)
             return;
         

@@ -38,6 +38,7 @@ public class CalenderSystem : MonoBehaviour
             IncrementDate();
             CalenderUI.instance.UpdateDate(Date);
             CalenderUI.instance.UpdateSeason(Date);
+            PlayerFood.instance.ResetStrength();
             GameSaveManager.instance.SaveGame();
         }
     }

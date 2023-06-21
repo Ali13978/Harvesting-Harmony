@@ -15,4 +15,4 @@ MonoBehaviour:
   ToolType: 0
   ToolName: Bucket
   sprite: {fileID: 1488525319, guid: 14b3738fe1499b5418a6b79b1cb58580, type: 3}
-  strengthReq: 15
+  strengthReq: 5

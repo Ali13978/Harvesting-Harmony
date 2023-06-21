@@ -985,8 +985,8 @@ MonoBehaviour:
   continueGameBtn: {fileID: 1324951681}
   continueBtnUperKa: {fileID: 803990364}
   continueBtnText: {fileID: 658627891}
-  defMoney: 10
-  defNumberOfTiles: 1
+  defMoney: 99999
+  defNumberOfTiles: 9
 --- !u!1 &803990362
 GameObject:
   m_ObjectHideFlags: 0

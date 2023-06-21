@@ -42,6 +42,8 @@ public class GameSaveManager : MonoBehaviour
     {
         foreach (TileManager tile in allTiles)
         {
+            if (!tile.isOwned)
+                return;
             ES3.Save("Tile" + tile.indexInAllTilesList + "isOwned", tile.isOwned);
             ES3.Save("Tile" + tile.indexInAllTilesList + "tileState", tile.TileState);
             ES3.Save("Tile" + tile.indexInAllTilesList + "isPlanted", tile.isPlanted);

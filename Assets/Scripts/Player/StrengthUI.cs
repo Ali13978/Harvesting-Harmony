@@ -8,8 +8,9 @@ public class StrengthUI : MonoBehaviour
     [SerializeField] Slider strengthSlider;
     
 
-    public void UpdateStrengthUI(int Strength, int maxStrength)
+    public void UpdateStrengthUI(int strength, int maxStrength)
     {
-
+        strengthSlider.maxValue = maxStrength;
+        strengthSlider.value = strength;
     }
 }

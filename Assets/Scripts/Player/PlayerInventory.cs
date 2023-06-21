@@ -92,7 +92,7 @@ public class PlayerInventory : MonoBehaviour
     }
 
     // Calculate the number of seeds for each SeedsItem
-    public Dictionary<SeedsItem, int> CalculateSeedCounts()
+    private Dictionary<SeedsItem, int> CalculateSeedCounts()
     {
         Dictionary<SeedsItem, int> seedCounts = new Dictionary<SeedsItem, int>(new SeedsItemComparer());
 

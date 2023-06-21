@@ -5,6 +5,7 @@ public class ToolDragging : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     [SerializeField] RectTransform imageRectTransform;
     [SerializeField] Vector2 offset = Vector2.zero;
+
     private Vector3 initialImagePosition;
 
     private void Start()
@@ -38,6 +39,10 @@ public class ToolDragging : MonoBehaviour, IDragHandler, IEndDragHandler
             return;
         if (!tile.isOwned)
             return;
+        if (!(PlayerFood.instance.GetStrength() >= SelectedTool.strengthReq))
+            return;
+
+        PlayerFood.instance.UpdateStrength(-1 * SelectedTool.strengthReq);
 
         if (SelectedTool.ToolType == ToolsItem.tool.Hoe)
         {

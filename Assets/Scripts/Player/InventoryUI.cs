@@ -9,6 +9,7 @@ public class InventoryUI : MonoBehaviour
     PlayerInventory playerInventory;
 
     [SerializeField] InventoryUIModules InventoryModules;
+
     private List<string> SeedsIds = new List<string>();
 
     private void Start()

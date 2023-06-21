@@ -18,8 +18,8 @@ public class ShopItemPrefab : MonoBehaviour
     public void UpdateUI(Sprite _sprite, int _buyPrice, int _sellPrice, UnityAction BuyBtnAction, UnityAction SellBtnAction)
     {
         sprite.sprite = _sprite;
-        buyPriceText.text = "Buy Price: " + _buyPrice.ToString() + "$";
-        sellPriceText.text = "Sell Price: " + _sellPrice.ToString() + "$";
+        buyPriceText.text = "Buy Price: " + _buyPrice.ToString();
+        sellPriceText.text = "Sell Price: " + _sellPrice.ToString();
         buyButton.onClick.AddListener(BuyBtnAction);
         sellButton.onClick.AddListener(SellBtnAction);
     }

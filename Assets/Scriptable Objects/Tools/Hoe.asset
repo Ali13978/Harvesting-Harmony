@@ -15,4 +15,4 @@ MonoBehaviour:
   ToolType: 1
   ToolName: Hoe
   sprite: {fileID: 645893092, guid: 14b3738fe1499b5418a6b79b1cb58580, type: 3}
-  strengthReq: 30
+  strengthReq: 10

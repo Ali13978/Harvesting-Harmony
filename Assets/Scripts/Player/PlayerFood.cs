@@ -26,6 +26,16 @@ public class PlayerFood : MonoBehaviour
         strengthUI.UpdateStrengthUI(playerStrength, maxStrength);
     }
 
+    public int GetStrength()
+    {
+        return playerStrength;
+    }
+
+    public void ResetStrength()
+    {
+        UpdateStrength(maxStrength);
+    }
+
     public void UpdateStrength(int amount)
     {
         playerStrength += amount;
