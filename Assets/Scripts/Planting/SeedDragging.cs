@@ -41,9 +41,6 @@ public class SeedDragging : MonoBehaviour, IDragHandler, IEndDragHandler
 
         if(tile.GetTileState() == TileManager.state.Hoed || tile.GetTileState() == TileManager.state.Watered)
         {
-            if (tile.GetIsPlanted())
-                return;
-
             tile.PlantSeed(SelectedSeed);
         }
 

@@ -84,7 +84,11 @@ public class TileManager : MonoBehaviour
 
     public void PlantSeed(SeedsItem seed)
     {
+        if (isPlanted)
+            return;
+
         isPlanted = true;
+
         plantedSeed = seed;
         PlayerInventory.instance.RemoveSeedInInventory(plantedSeed);
         growthIndex = 0;

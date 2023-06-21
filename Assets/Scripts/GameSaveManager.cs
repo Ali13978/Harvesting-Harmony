@@ -33,6 +33,11 @@ public class GameSaveManager : MonoBehaviour
         ES3.Save("Current Money", Money);
     }
 
+    private void SaveFirstTimeStarted()
+    {
+        ES3.Save("FirstTimeStarted", false);
+    }
+
     private void SaveFarmTilesData(List<TileManager> allTiles)
     {
         foreach (TileManager tile in allTiles)
@@ -51,6 +56,7 @@ public class GameSaveManager : MonoBehaviour
         SaveDate(calenderSystem.GetDate());
         SaveInventory(playerInventory.GetSeedsInInventory());
         SaveMoney(playerEconomy.GetMoney());
+        SaveFirstTimeStarted();
         SaveFarmTilesData(allTilesManager.GetTilesList());
     }
 }

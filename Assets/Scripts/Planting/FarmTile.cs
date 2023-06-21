@@ -23,6 +23,7 @@ public class FarmTile : MonoBehaviour
                 if (PlayerEconomy.instance.GetMoney() >= tile.PriceTobuy)
                 {
                     tile.isOwned = true;
+
                     BuyCanvas.SetActive(false);
                     PlayerEconomy.instance.UpdateMoney(-1 * tile.PriceTobuy);
                 }
