@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887d0ecf3736f644b8975eafcccb6f00, type: 3}
   m_Name: Peanks Seeds
   m_EditorClassIdentifier: 
-  sprite: {fileID: -1257583977, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  sprite: {fileID: 21300000, guid: 571fcebe5a499c6418624b5d5c491d00, type: 3}
   growthStages:
   - {fileID: 788846647, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 746475827, guid: a321f773c5d5b294097139dc0da710e9, type: 3}

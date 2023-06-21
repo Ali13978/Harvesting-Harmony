@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887d0ecf3736f644b8975eafcccb6f00, type: 3}
+  m_Name: Aubaba Seeds
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: b2fe53f83e87e414092b3284b0281cd2, type: 3}
+  growthStages:
+  - {fileID: -732269182, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -1188609042, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -1909640482, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: 1241446375, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -641598312, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -1824128859, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -2005403040, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  foodItWillGrow: {fileID: 11400000, guid: d1d1918277f0b1844aa64e56dfe708b2, type: 2}
+  id: Aubaba-Seeds
+  BuyPrice: 3
+  SellPrice: 1
+  isPurchaseable: 1
+  isFood: 0
+  strengthItGives: 0

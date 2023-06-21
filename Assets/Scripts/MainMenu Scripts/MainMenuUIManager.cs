@@ -54,7 +54,5 @@ public class MainMenuUIManager : MonoBehaviour
             ES3.Save("Tile" + i + "isOwned", true);
         }
     }
-
-
-
+    
 }

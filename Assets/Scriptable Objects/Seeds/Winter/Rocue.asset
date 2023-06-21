@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 887d0ecf3736f644b8975eafcccb6f00, type: 3}
-  m_Name: Banana
+  m_Name: Rocue
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: f0a8cca79440e4f41a371b7195677fb1, type: 3}
+  sprite: {fileID: 62069844, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   growthStages: []
   DaysToGrowEachStage: 
   foodItWillGrow: {fileID: 0}
-  id: Banana
-  BuyPrice: 15
-  SellPrice: 4
-  isPurchaseable: 1
-  isFood: 0
-  strengthItGives: 0
+  id: Rocue
+  BuyPrice: 0
+  SellPrice: 10
+  isPurchaseable: 0
+  isFood: 1
+  strengthItGives: 15

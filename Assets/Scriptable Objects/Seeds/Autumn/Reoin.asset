@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 887d0ecf3736f644b8975eafcccb6f00, type: 3}
-  m_Name: Peanks
+  m_Name: Reoin
   m_EditorClassIdentifier: 
-  sprite: {fileID: -1475800596, guid: 2371642267e858141aab9d914cb0a269, type: 3}
+  sprite: {fileID: 1998138084, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   growthStages: []
   DaysToGrowEachStage: 
-  id: Peanks
+  foodItWillGrow: {fileID: 0}
+  id: Reoin
   BuyPrice: 0
   SellPrice: 10
   isPurchaseable: 0

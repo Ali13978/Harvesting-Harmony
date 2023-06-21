@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887d0ecf3736f644b8975eafcccb6f00, type: 3}
+  m_Name: Cacorange Seeds
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 9fd21bfeb582f4d49b2f45d571b96933, type: 3}
+  growthStages:
+  - {fileID: 470555288, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: 85854437, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -133674445, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -1986645457, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -1428652641, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -1297199246, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -561094094, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  foodItWillGrow: {fileID: 11400000, guid: 9515c9bf1cd2dba42b885b0f0286ea81, type: 2}
+  id: Cacorange-Seeds
+  BuyPrice: 3
+  SellPrice: 1
+  isPurchaseable: 1
+  isFood: 0
+  strengthItGives: 0

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887d0ecf3736f644b8975eafcccb6f00, type: 3}
+  m_Name: Corrato Seeds
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 758bf925d04b8644695dbeee10d40be4, type: 3}
+  growthStages:
+  - {fileID: -1533253700, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: 1232129742, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -2006432879, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: 1319228940, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: 991017299, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: 515769919, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: 1153349802, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  foodItWillGrow: {fileID: 11400000, guid: 1db3935d7005ac2418508d54e949592d, type: 2}
+  id: Corrato-Seeds
+  BuyPrice: 3
+  SellPrice: 1
+  isPurchaseable: 1
+  isFood: 0
+  strengthItGives: 0

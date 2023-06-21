@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887d0ecf3736f644b8975eafcccb6f00, type: 3}
+  m_Name: Safruma Seeds
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 1056a375aa1c9204baf21c2f168075dc, type: 3}
+  growthStages:
+  - {fileID: -66334101, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -868159960, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: -1610785680, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: 1291854863, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: 1029573535, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: 254638997, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  - {fileID: 551305545, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
+  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  foodItWillGrow: {fileID: 11400000, guid: de5f8fa4e1ed92e49981dcb70109945a, type: 2}
+  id: Safruma-Seeds
+  BuyPrice: 3
+  SellPrice: 1
+  isPurchaseable: 1
+  isFood: 0
+  strengthItGives: 0

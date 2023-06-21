@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 887d0ecf3736f644b8975eafcccb6f00, type: 3}
-  m_Name: Guava
+  m_Name: Cacerries
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 48de0fc5cb70d6043bf53e830cbbf00f, type: 3}
+  sprite: {fileID: -1471692974, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   growthStages: []
   DaysToGrowEachStage: 
   foodItWillGrow: {fileID: 0}
-  id: Guava
-  BuyPrice: 17
-  SellPrice: 9
-  isPurchaseable: 1
-  isFood: 0
-  strengthItGives: 0
+  id: Cacerries
+  BuyPrice: 0
+  SellPrice: 10
+  isPurchaseable: 0
+  isFood: 1
+  strengthItGives: 15
