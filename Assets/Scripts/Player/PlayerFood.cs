@@ -13,16 +13,28 @@ public class PlayerFood : MonoBehaviour
     #endregion
 
     [SerializeField] int maxStrength;
-    [SerializeField] int PlayerStrength;
+    [SerializeField] int playerStrength;
 
-    
+    StrengthUI strengthUI;
+
+    private void Start()
+    {
+        strengthUI = GetComponent<StrengthUI>();
+        
+        playerStrength = maxStrength;
+
+        strengthUI.UpdateStrengthUI(playerStrength, maxStrength);
+    }
+
     public void UpdateStrength(int amount)
     {
-        PlayerStrength += amount;
+        playerStrength += amount;
 
-        if (PlayerStrength > maxStrength)
-            PlayerStrength = maxStrength;
-        if (PlayerStrength < 0)
-            PlayerStrength = 0;
+        if (playerStrength > maxStrength)
+            playerStrength = maxStrength;
+        if (playerStrength < 0)
+            playerStrength = 0;
+
+        strengthUI.UpdateStrengthUI(playerStrength, maxStrength);
     }
 }

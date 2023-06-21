@@ -9,9 +9,13 @@ public class MainMenuUIManager : MonoBehaviour
 
     [SerializeField] private SceneLoadManager sceneManager;
     [SerializeField] private Color disabledBtnColor;
-    [SerializeField] private Button continueGameBtn;
     [SerializeField] private Button newGameBtn;
     [SerializeField] private Button exitGameBtn;
+
+    [Header("Continue Btn")]
+    [SerializeField] private Button continueGameBtn;
+    [SerializeField] private Image continueBtnUperKa;
+    [SerializeField] private TMPro.TMP_Text continueBtnText;
 
     [Header("Default Values")]
     [SerializeField] private int defMoney = 10;
@@ -24,9 +28,9 @@ public class MainMenuUIManager : MonoBehaviour
         if(firstTimeStarted)
         {
             continueGameBtn.interactable = false;
+            continueBtnUperKa.color = disabledBtnColor;
             continueGameBtn.GetComponent<Image>().color = disabledBtnColor;
-
-
+            continueBtnText.color = new Color(continueBtnText.color.r, continueBtnText.color.g, continueBtnText.color.b, disabledBtnColor.a);
         }
 
         continueGameBtn.onClick.AddListener(() => {

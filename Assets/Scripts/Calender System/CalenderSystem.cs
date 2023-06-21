@@ -22,6 +22,7 @@ public class CalenderSystem : MonoBehaviour
             Date = ES3.Load("Date", new List<int> { 1, 1, 2016 });
 
         CalenderUI.instance.UpdateDate(Date);
+        CalenderUI.instance.UpdateSeason(Date);
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class CalenderSystem : MonoBehaviour
             allTilesManager.GrowPlants();
             IncrementDate();
             CalenderUI.instance.UpdateDate(Date);
+            CalenderUI.instance.UpdateSeason(Date);
             GameSaveManager.instance.SaveGame();
         }
     }
