@@ -7,10 +7,12 @@ public class ToolDragging : MonoBehaviour, IDragHandler, IEndDragHandler
     [SerializeField] Vector2 offset = Vector2.zero;
 
     private Vector3 initialImagePosition;
+    private AudioSource audioSource;
 
     private void Start()
     {
         initialImagePosition = imageRectTransform.localPosition;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -44,10 +46,14 @@ public class ToolDragging : MonoBehaviour, IDragHandler, IEndDragHandler
 
         PlayerFood.instance.UpdateStrength(-1 * SelectedTool.strengthReq);
 
+        audioSource.clip = SelectedTool.SFX;
+        audioSource.Play();
+
         if (SelectedTool.ToolType == ToolsItem.tool.Hoe)
         {
             if (!(tile.GetTileState() == TileManager.state.Basic))
                 return;
+
 
             tile.HoeTile();
         }

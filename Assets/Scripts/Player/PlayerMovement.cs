@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D MyRigidbody2D;
     private Animator anim;
+    private AudioSource audioSource;
 
     private Vector2 movement;
 
@@ -13,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     {
         MyRigidbody2D = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -29,6 +31,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(movement == Vector2.zero)
+        {
+            audioSource.Stop();
+            return;
+        }
+
+        if (!audioSource.isPlaying)
+            audioSource.Play();
+
         MyRigidbody2D.MovePosition(MyRigidbody2D.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }

@@ -16,3 +16,4 @@ MonoBehaviour:
   ToolName: Bucket
   sprite: {fileID: 1488525319, guid: 14b3738fe1499b5418a6b79b1cb58580, type: 3}
   strengthReq: 5
+  SFX: {fileID: 8300000, guid: 86174a2b7e7416c4d957d1143cc93c86, type: 3}

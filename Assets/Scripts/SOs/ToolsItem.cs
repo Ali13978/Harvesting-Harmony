@@ -14,4 +14,5 @@ public class ToolsItem : ScriptableObject
     public string ToolName;
     public Sprite sprite;
     public int strengthReq;
+    public AudioClip SFX;
 }

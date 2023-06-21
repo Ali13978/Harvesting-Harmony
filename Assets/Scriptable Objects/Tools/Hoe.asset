@@ -16,3 +16,4 @@ MonoBehaviour:
   ToolName: Hoe
   sprite: {fileID: 645893092, guid: 14b3738fe1499b5418a6b79b1cb58580, type: 3}
   strengthReq: 10
+  SFX: {fileID: 8300000, guid: f4ff75233dcb98f4789da248da8e4458, type: 3}
