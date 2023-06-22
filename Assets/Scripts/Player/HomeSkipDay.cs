@@ -8,10 +8,14 @@ public class HomeSkipDay : MonoBehaviour
     [SerializeField] private Button skipDayButton;
     [SerializeField] private CalenderSystem calenderSystem;
 
+    [Header("Transition-Image")]
+    [SerializeField] private ManageTransition transitionImage;
+
     private void Start()
     {
         skipDayButton.onClick.AddListener(() => {
             calenderSystem.SkipDay();
+            transitionImage.StartTransition();
         });
     }
 

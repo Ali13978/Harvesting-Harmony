@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Buy Sell Window")]
     [SerializeField] private BuySellWindow buySellWindow;
-
+    
     private void Start()
     {
         TurnOffAllPannels();
@@ -142,4 +142,5 @@ public class UIManager : MonoBehaviour
     {
         seedsIventoryBtnImage.sprite = defInventoryBtnImage;
     }
+    
 }
