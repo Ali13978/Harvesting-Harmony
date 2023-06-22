@@ -15,17 +15,14 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 5af5d5b8fdf2b30489f26643dbd2d23e, type: 3}
   growthStages:
   - {fileID: -387920339, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 574086704, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -1442732968, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -1715320094, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1285058312, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -1111528996, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 880888119, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 010000000100000001000000
   foodItWillGrow: {fileID: 11400000, guid: f30a6a4756f3a074eb07d1dd04cacef6, type: 2}
   id: Mooam-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 15
+  SellPrice: 8
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

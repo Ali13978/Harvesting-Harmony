@@ -16,16 +16,14 @@ MonoBehaviour:
   growthStages:
   - {fileID: 294974624, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1875621989, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -38001894, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -1800959126, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -1397281023, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 79112372, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 831109373, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 01000000010000000100000001000000
   foodItWillGrow: {fileID: 11400000, guid: 7630ec87a4991b64b9d483267a1edfac, type: 2}
   id: Chuf-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 20
+  SellPrice: 12
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

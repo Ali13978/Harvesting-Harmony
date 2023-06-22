@@ -15,17 +15,13 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 9a1530a9d395da744813be63a37a9bac, type: 3}
   growthStages:
   - {fileID: 2069334799, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 1159413549, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -1519488217, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 1762249607, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -1702081966, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -109521782, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1456672991, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 0100000001000000
   foodItWillGrow: {fileID: 11400000, guid: c70f30b91f4b98e46a9ac6dd514e55a4, type: 2}
   id: Bottarriea-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 10
+  SellPrice: 5
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

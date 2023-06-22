@@ -15,17 +15,15 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 99bfe4fb4604f6e43ab11f0ce027bf63, type: 3}
   growthStages:
   - {fileID: -595727469, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -1804375559, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -1870305428, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -988233543, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 652240653, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 2007542714, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 613784371, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 01000000010000000100000001000000
   foodItWillGrow: {fileID: 11400000, guid: 381f07838098b474e879e2d36e6c732f, type: 2}
   id: PopAcom-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 20
+  SellPrice: 12
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

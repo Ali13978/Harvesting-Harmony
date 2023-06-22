@@ -15,17 +15,14 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 571fcebe5a499c6418624b5d5c491d00, type: 3}
   growthStages:
   - {fileID: 788846647, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 746475827, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 301816901, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -377046311, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 648574425, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -545582666, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -1257583977, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 010000000100000001000000
   foodItWillGrow: {fileID: 11400000, guid: 77798c1650969ef4d822fc377c000339, type: 2}
   id: Peanks-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 15
+  SellPrice: 8
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

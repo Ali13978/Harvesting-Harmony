@@ -18,7 +18,7 @@ MonoBehaviour:
   foodItWillGrow: {fileID: 0}
   id: Corrato
   BuyPrice: 0
-  SellPrice: 10
+  SellPrice: 30
   isPurchaseable: 0
   isFood: 1
-  strengthItGives: 15
+  strengthItGives: 20

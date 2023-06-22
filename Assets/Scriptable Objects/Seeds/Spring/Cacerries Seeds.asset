@@ -15,17 +15,14 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: db8f4ea99fe6b0a44b891d36022cf72f, type: 3}
   growthStages:
   - {fileID: -1285613896, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -883691217, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1689690908, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -212375076, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 1333547610, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 1045674904, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -1471692974, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 010000000100000001000000
   foodItWillGrow: {fileID: 11400000, guid: 4b0e910239479074b8be91876ad8e209, type: 2}
   id: Cacerries-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 15
+  SellPrice: 8
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

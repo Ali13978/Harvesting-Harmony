@@ -15,17 +15,14 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 758bf925d04b8644695dbeee10d40be4, type: 3}
   growthStages:
   - {fileID: -1533253700, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 1232129742, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -2006432879, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 1319228940, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 991017299, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 515769919, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1153349802, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 010000000100000001000000
   foodItWillGrow: {fileID: 11400000, guid: 1db3935d7005ac2418508d54e949592d, type: 2}
   id: Corrato-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 15
+  SellPrice: 8
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

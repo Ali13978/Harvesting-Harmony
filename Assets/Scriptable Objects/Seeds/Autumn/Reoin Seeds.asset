@@ -15,17 +15,15 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: be01d597f9fb45d4293ae378a9ab0ac4, type: 3}
   growthStages:
   - {fileID: -1559733128, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -1124100614, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 814476999, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 132268239, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -1192654608, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -81123609, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1998138084, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 01000000010000000100000001000000
   foodItWillGrow: {fileID: 11400000, guid: 4b4f687ab785f854fa4707805ff0f44a, type: 2}
   id: Reoin-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 20
+  SellPrice: 12
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

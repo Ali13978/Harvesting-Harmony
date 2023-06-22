@@ -5,14 +5,6 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class DayNightCycle : MonoBehaviour
 {
-    #region Singleton
-    public static DayNightCycle instance;
-    private void Awake()
-    {
-        instance = this;
-    }
-    #endregion
-
     [SerializeField] private PostProcessVolume postProcessVolume;
     [SerializeField] private List<Color> colorList = new List<Color>();
     [SerializeField] private List<float> colorTransitionTime = new List<float>();
@@ -22,10 +14,17 @@ public class DayNightCycle : MonoBehaviour
     private int nextIndex;
     private float timer = 0f;
 
+    #region Singleton
+    public static DayNightCycle instance;
+    private void Awake()
+    {
+        instance = this;
+        postProcessVolume.profile.TryGetSettings(out colorGrading);
+    }
+    #endregion
+
     private void Start()
     {
-        postProcessVolume.profile.TryGetSettings(out colorGrading);
-
         ResetDayNightCycle();
     }
 

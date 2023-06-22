@@ -15,17 +15,13 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: b2fe53f83e87e414092b3284b0281cd2, type: 3}
   growthStages:
   - {fileID: -732269182, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -1188609042, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -1909640482, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 1241446375, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -641598312, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -1824128859, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -2005403040, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 0100000001000000
   foodItWillGrow: {fileID: 11400000, guid: d1d1918277f0b1844aa64e56dfe708b2, type: 2}
   id: Aubaba-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 10
+  SellPrice: 5
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

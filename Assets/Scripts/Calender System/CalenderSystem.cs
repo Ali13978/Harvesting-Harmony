@@ -23,6 +23,8 @@ public class CalenderSystem : MonoBehaviour
 
         CalenderUI.instance.UpdateDate(Date);
         CalenderUI.instance.UpdateSeason(Date);
+        DayNightCycle.instance.UpdateSeasonalTemperature(Date);
+        Rain20Percent();
     }
 
     // Update is called once per frame
@@ -38,11 +40,20 @@ public class CalenderSystem : MonoBehaviour
             IncrementDate();
             CalenderUI.instance.UpdateDate(Date);
             CalenderUI.instance.UpdateSeason(Date);
+            DayNightCycle.instance.ResetDayNightCycle();
             PlayerFood.instance.ResetStrength();
             GameSaveManager.instance.SaveGame();
-            DayNightCycle.instance.ResetDayNightCycle();
             DayNightCycle.instance.UpdateSeasonalTemperature(Date);
+
+            Rain20Percent();
         }
+    }
+
+    private void Rain20Percent()
+    {
+        List<bool> willRainList = new List<bool> { true, false, false, false, false };
+        bool willRain = willRainList[Random.Range(0, willRainList.Count)];
+        RainManager.instance.SetRaining(willRain);
     }
     
     private void IncrementDate()

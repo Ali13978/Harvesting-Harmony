@@ -19,13 +19,12 @@ MonoBehaviour:
   - {fileID: -1610785680, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1291854863, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1029573535, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 254638997, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 551305545, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 0100000001000000010000000100000001000000
   foodItWillGrow: {fileID: 11400000, guid: de5f8fa4e1ed92e49981dcb70109945a, type: 2}
   id: Safruma-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 25
+  SellPrice: 15
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

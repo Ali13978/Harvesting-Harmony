@@ -15,17 +15,13 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: a13cfdfa3427964469697198401b6f8f, type: 3}
   growthStages:
   - {fileID: 1357415133, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 492958942, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 1292371484, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -1211093724, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 1651985053, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -74863309, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1356013998, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 0100000001000000
   foodItWillGrow: {fileID: 11400000, guid: e5ada644de7a16743af250b9644db331, type: 2}
   id: Cauliviol-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 10
+  SellPrice: 5
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

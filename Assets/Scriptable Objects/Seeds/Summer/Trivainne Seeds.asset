@@ -19,13 +19,12 @@ MonoBehaviour:
   - {fileID: 1090288008, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -444596942, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1817548457, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -754937713, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -1455518591, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 0100000001000000010000000100000001000000
   foodItWillGrow: {fileID: 11400000, guid: 491ec8648b6de60458625bdd0bb97e90, type: 2}
   id: Trivainne-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 25
+  SellPrice: 15
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

@@ -19,13 +19,12 @@ MonoBehaviour:
   - {fileID: 557806878, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1273444557, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -933670731, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -1277929498, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1339026213, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 0100000001000000010000000100000001000000
   foodItWillGrow: {fileID: 11400000, guid: b3e5550775348a14fa844058283064f2, type: 2}
   id: Sproccili-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 25
+  SellPrice: 15
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0

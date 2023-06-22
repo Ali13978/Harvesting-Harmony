@@ -24,6 +24,8 @@ public class TileManager : MonoBehaviour
     private void Start()
     {
         isOwned = ES3.Load("Tile" + indexInAllTilesList + "isOwned", false);
+        if (!isOwned)
+            return;
         TileState = ES3.Load("Tile" + indexInAllTilesList + "tileState", state.Basic);
         isPlanted = ES3.Load("Tile" + indexInAllTilesList + "isPlanted", false);
         plantedSeed = ES3.Load("Tile" + indexInAllTilesList + "plantedSeed", new SeedsItem());
@@ -101,12 +103,11 @@ public class TileManager : MonoBehaviour
     {
         if (TileState != state.Watered)
             return;
-        if (!isPlanted)
-            return;
-        if (TileState == state.Hoed)
-            return;
+
         HoeTile();
 
+        if (!isPlanted)
+            return;
 
         if (isGrown)
             return;

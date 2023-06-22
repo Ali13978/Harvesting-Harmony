@@ -16,16 +16,14 @@ MonoBehaviour:
   growthStages:
   - {fileID: -955262940, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -1284028976, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: 701936898, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: -1878120523, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 573374602, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  - {fileID: -264252084, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
   - {fileID: 1093434051, guid: a321f773c5d5b294097139dc0da710e9, type: 3}
-  DaysToGrowEachStage: 010000000100000001000000010000000100000001000000
+  DaysToGrowEachStage: 01000000010000000100000001000000
   foodItWillGrow: {fileID: 11400000, guid: 2cf8f675c622c2e4e81dbecca2dd02bd, type: 2}
   id: Tomelone-Seeds
-  BuyPrice: 3
-  SellPrice: 1
+  BuyPrice: 20
+  SellPrice: 12
   isPurchaseable: 1
   isFood: 0
   strengthItGives: 0
