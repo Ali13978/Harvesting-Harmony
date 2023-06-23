@@ -31,6 +31,12 @@ public class PlayerFood : MonoBehaviour
         return playerStrength;
     }
 
+    public bool AlreadyHaveFullStrength()
+    {
+        bool haveStr = (playerStrength >= maxStrength);
+        return haveStr;
+    }
+
     public void ResetStrength()
     {
         UpdateStrength(maxStrength);

@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
+    //[SerializeField] private ParticleSystem playerTrailParticleSystem;
 
     private Rigidbody2D MyRigidbody2D;
     private Animator anim;
@@ -15,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
         MyRigidbody2D = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        //playerTrailParticleSystem = GetComponentInChildren<ParticleSystem>();
     }
 
     private void Update()
@@ -27,6 +29,18 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("Horizontal", movement.x);
         anim.SetFloat("Vertical", movement.y);
         anim.SetFloat("Speed", movement.sqrMagnitude);
+
+
+        //if (movement != Vector2.zero)
+        //{
+        //    if (!playerTrailParticleSystem.isPlaying)
+        //        playerTrailParticleSystem.Play();
+        //}
+        //else
+        //{
+        //    if (playerTrailParticleSystem.isPlaying)
+        //        playerTrailParticleSystem.Stop();
+        //}
     }
 
     private void FixedUpdate()

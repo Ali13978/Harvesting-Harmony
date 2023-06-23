@@ -36,6 +36,22 @@ public class FarmTile : MonoBehaviour
         });
     }
 
+    private void Update()
+    {
+        if (!tile.isOwned)
+            return;
+        if (!tile.isPlanted)
+            return;
+
+        if (tile.isGrown)
+            SetTileCollider(false);
+    }
+
+    public void SetTileCollider(bool isActive)
+    {
+        tileCollider.enabled = isActive;
+    }
+
     public void UpdateTileSpriteWithColor(Sprite sprite, Color color)
     {
         tileSpriteRenderer.sprite = sprite;

@@ -31,6 +31,7 @@ public class Cultivating : MonoBehaviour
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
                 playerInventory.AddSeedInInventory(tile.plantedSeed.foodItWillGrow);
+                tile.SetTileCollider(true);
                 clickCollider.enabled = false;
                 tile.isGrown = false;
                 tile.isPlanted = false;

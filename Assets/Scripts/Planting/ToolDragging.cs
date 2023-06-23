@@ -8,7 +8,7 @@ public class ToolDragging : MonoBehaviour, IDragHandler, IEndDragHandler
 
     private Vector3 initialImagePosition;
     private AudioSource audioSource;
-
+    
     private void Start()
     {
         initialImagePosition = imageRectTransform.localPosition;
@@ -63,7 +63,7 @@ public class ToolDragging : MonoBehaviour, IDragHandler, IEndDragHandler
                 return;
             tile.WaterTile();
         }
-        
+
     }
 
 }

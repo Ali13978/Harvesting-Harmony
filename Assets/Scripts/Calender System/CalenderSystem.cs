@@ -40,7 +40,7 @@ public class CalenderSystem : MonoBehaviour
             IncrementDate();
             CalenderUI.instance.UpdateDate(Date);
             CalenderUI.instance.UpdateSeason(Date);
-            DayNightCycle.instance.ResetDayNightCycle();
+            DayNightCycle.instance.ResetColorFilter(Color.white);
             PlayerFood.instance.ResetStrength();
             GameSaveManager.instance.SaveGame();
             DayNightCycle.instance.UpdateSeasonalTemperature(Date);

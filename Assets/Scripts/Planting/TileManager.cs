@@ -45,7 +45,7 @@ public class TileManager : MonoBehaviour
                 isGrown = true;
         }
     }
-
+    
     private void Update()
     {
         if (!isGrown)
@@ -130,5 +130,11 @@ public class TileManager : MonoBehaviour
             }
 
         }
+    }
+
+
+    public void SetTileCollider(bool isActive)
+    {
+        tile.SetTileCollider(isActive);
     }
 }

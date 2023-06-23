@@ -18,7 +18,7 @@ MonoBehaviour:
   foodItWillGrow: {fileID: 0}
   id: Sproccili
   BuyPrice: 0
-  SellPrice: 50
+  SellPrice: 40
   isPurchaseable: 0
   isFood: 1
-  strengthItGives: 40
+  strengthItGives: 100

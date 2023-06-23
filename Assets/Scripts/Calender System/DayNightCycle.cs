@@ -5,15 +5,6 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class DayNightCycle : MonoBehaviour
 {
-    [SerializeField] private PostProcessVolume postProcessVolume;
-    [SerializeField] private List<Color> colorList = new List<Color>();
-    [SerializeField] private List<float> colorTransitionTime = new List<float>();
-
-    private ColorGrading colorGrading;
-    private int currentIndex;
-    private int nextIndex;
-    private float timer = 0f;
-
     #region Singleton
     public static DayNightCycle instance;
     private void Awake()
@@ -22,37 +13,53 @@ public class DayNightCycle : MonoBehaviour
         postProcessVolume.profile.TryGetSettings(out colorGrading);
     }
     #endregion
+    [SerializeField] private PostProcessVolume postProcessVolume;
+    [SerializeField] private List<Color> colorList = new List<Color>();
+    [SerializeField] private List<float> transitionTimeList = new List<float>();
+
+    private ColorGrading colorGrading;
+    private int currentIndex = 0;
+    private int nextIndex = 1;
+    private float timer = 0f;
+    private bool transitioning = true;
 
     private void Start()
     {
-        ResetDayNightCycle();
+        postProcessVolume.profile.TryGetSettings(out colorGrading);
+        
+        colorGrading.colorFilter.value = colorList[currentIndex];
     }
 
     private void Update()
     {
-        timer += Time.deltaTime;
-        float t = Mathf.Clamp01(timer / colorTransitionTime[currentIndex]);
-
-        colorGrading.colorFilter.value = Color.Lerp(colorList[currentIndex], colorList[nextIndex], t);
-        
-
-        if (t >= 1f)
+        if (transitioning)
         {
-            currentIndex = nextIndex;
-            nextIndex = (nextIndex + 1) % colorList.Count;
+            timer += Time.deltaTime;
+            float t = Mathf.Clamp01(timer / transitionTimeList[currentIndex]);
 
-            timer = 0f;
+            colorGrading.colorFilter.value = Color.Lerp(colorList[currentIndex], colorList[nextIndex], t);
+            
+            if (t >= 1f)
+            {
+                transitioning = false;
+                currentIndex = nextIndex;
+                nextIndex = (nextIndex + 1) % colorList.Count;
+
+                timer = 0f;
+            }
         }
     }
 
-    public void ResetDayNightCycle()
+    public void ResetColorFilter(Color resetColor)
     {
+        colorGrading.colorFilter.value = resetColor;
+
+        Debug.Log("Day Night Cycle reseted");
         currentIndex = 0;
         nextIndex = 1;
-
-        colorGrading.colorFilter.value = colorList[currentIndex];
+        transitioning = true;
+        timer = 0f;
     }
-
     public void UpdateSeasonalTemperature(List<int> Date)
     {
         if (Date[1] == 1)

@@ -18,7 +18,7 @@ MonoBehaviour:
   foodItWillGrow: {fileID: 0}
   id: Tomelone
   BuyPrice: 0
-  SellPrice: 40
+  SellPrice: 35
   isPurchaseable: 0
   isFood: 1
-  strengthItGives: 30
+  strengthItGives: 100

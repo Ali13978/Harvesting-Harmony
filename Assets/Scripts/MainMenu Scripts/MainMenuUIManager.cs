@@ -17,6 +17,17 @@ public class MainMenuUIManager : MonoBehaviour
     [SerializeField] private Image continueBtnUperKa;
     [SerializeField] private TMPro.TMP_Text continueBtnText;
 
+    [Header("New-Game Pannel")]
+    [SerializeField] private GameObject NewGamePannel;
+    [SerializeField] private Button YesBtn;
+    [SerializeField] private Button NoBtn;
+
+    [Header("TutorialPannel")]
+    [SerializeField] private Image TutorialPannel;
+    [SerializeField] private List<Sprite> TutorialSprites;
+    [SerializeField] private Button nextButton;
+    private int currentIndex = 0;
+
     [Header("Default Values")]
     [SerializeField] private int defMoney = 10;
     [SerializeField] private int defNumberOfTiles = 1;
@@ -38,14 +49,38 @@ public class MainMenuUIManager : MonoBehaviour
         });
 
         newGameBtn.onClick.AddListener(()=> {
+            NewGamePannel.SetActive(true);
+        });
 
+        YesBtn.onClick.AddListener(() => {
             SetDefaultSaveValues();
-            sceneManager.LoadMainGameScene();
+            StartTutorial();
+        });
+
+        NoBtn.onClick.AddListener(() => {
+            NewGamePannel.SetActive(false);
         });
 
         exitGameBtn.onClick.AddListener(() => {
             Application.Quit();
         });
+    }
+
+    private void StartTutorial()
+    {
+        TutorialPannel.gameObject.SetActive(true);
+
+        nextButton.onClick.AddListener(() => { ShowNextImage(); });
+    }
+
+    public void ShowNextImage()
+    {
+        currentIndex++;
+        if (currentIndex >= (TutorialSprites.Count - 1))
+            sceneManager.LoadMainGameScene();
+        else
+            TutorialPannel.sprite = TutorialSprites[currentIndex];
+
     }
 
     private void SetDefaultSaveValues()

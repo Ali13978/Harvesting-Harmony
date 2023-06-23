@@ -50,6 +50,9 @@ public class InventoryUI : MonoBehaviour
                 }
                 else
                 {
+                    if (PlayerFood.instance.AlreadyHaveFullStrength())
+                        return;
+
                     PlayerFood.instance.UpdateStrength(seed.strengthItGives);
                     playerInventory.RemoveSeedInInventory(seed);
                 }
